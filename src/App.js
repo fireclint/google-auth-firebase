@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Protected from './components/Protected';
 import { AuthContextProvider } from './context/AuthContext';
@@ -9,7 +9,7 @@ import Signin from './pages/Signin';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <AuthContextProvider>
         <Navbar />
         <Routes>
@@ -25,7 +25,7 @@ function App() {
           />
         </Routes>
       </AuthContextProvider>
-    </div>
+    </BrowserRouter>
   );
 }
 
